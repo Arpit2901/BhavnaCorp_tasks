@@ -31,7 +31,7 @@
                             <a href="#About"><font face="arial" color="#ffffff" size="4">
                                 About </font></a>
                         </td> <td>
-                            <a href=""><font face="arial" color="#ffffff" size="4">
+                            <a href="#Services"><font face="arial" color="#ffffff" size="4">
                                 Services </font></a>
                         </td>  <td>
                             <a href="#Contact"><font face="arial" color="#ffffff" size="4">
@@ -105,13 +105,93 @@
                             <img src="imgs/images (2).png" >
                         </td>
                     </tr>
+                    <tr>
+                        <td width ="40%" align="center">
+                            <img src="imgs/images (3).png" >
+                        </td>
+                         <td width ="30%" align="center">
+                            <img src="imgs/images (4).png" >
+                        </td>
+                    </tr>
                 </table>
             </td>
         </tr>
     </table>
         <!-- Services -->
-        
-        <!-- Contacts -->
+        <table id="Services" border ="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#707070" ">
+                <tr>
+                    <td height="180" align ="center" colspan="2" >
+                        <font face="arial" color ="#f3971b" size="5">
+                            Services
+                        </font>
+                        <hr width ="70" color ="#f3971b">
+                        <h3 > Audio and Video Attributes.</h3>
+                    
+                    </td>  
+                </tr>
+                <td align="center" >
+                    <table border="0" width="90%" cellpadding="15" cellspacing="0"
+                    bgcolor="#353535">
+                        <tr>
+                            <td width ="50%" align="center"> 
+                                <font face="arial" color ="#f3971b" size="4">
+                                    <h3 >Video</h3>
+                                </font>
+                                <div>
+                                    <video width="550" controls>
+                                        <source src="imgs/360.mp4" type="video/mp4">
+                                        Your browser does not support
+                                    </video>
+                                </div>
+                            </td>
+                            <td align="center" valign="top"> 
+                                <font face="arial" color ="#f3971b" size="4">
+                                    <h3 >Audio</h3>
+                                </font>
+                                <div>
+                                    <audio  controls>
+                                        <source src="imgs/shambhu.mp3" type="audio/mp3">
+                                        Your browser does not support audio
+                                    </audio>
+                                </div>
+                                <div>
+                                    &nbsp;
+                                    &nbsp;
+                                </div>
+                                <div>
+                                    <font face="aperiam" color ="#f3971b" size="4">
+                                    <h3>Click the button to get your coordinates.</h3>
+                                    <button onclick="getLocation()">Try It</button>
+                                    <p id="demo"></p>
+                                </font>
+                                </div>
+                            </td>
+                        </tr>
+                </td>
+        </table>
+        <script>
+            var x = document.getElementById("demo");
+            
+            function getLocation() {
+              if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+              } else { 
+                x.innerHTML = "Geolocation is not supported by this browser.";
+              }
+            }
+            
+            function showPosition(position) {
+              x.innerHTML = "Latitude: " + position.coords.latitude + 
+              "<br>Longitude: " + position.coords.longitude;
+            }
+            </script>
+            <div>&nbsp;</div>
+            <div>
+                <h1>Embed Location Map</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448181.1637400844!2d76.81306057108965!3d28.647279935930275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1660079793777!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+            <!-- Contacts -->
         <table id="Contact" border ="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff ">
         <tr>
             <tr>
